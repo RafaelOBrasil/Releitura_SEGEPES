@@ -4,6 +4,7 @@ import SubHeader from "@/components/header/subHeader"
 import List_Instituicoes from "@/app/(private)/instituicoes/_components/list_instituicoes";
 import { Instituicoes } from "@/types/listas"
 import { useEffect, useState } from "react";
+import Loading from "@/components/loading/loading";
 
 
 
@@ -33,7 +34,7 @@ export default function InstituicaoPage() {
   return (
     <main className="sm:ml-64">
       <SubHeader title="Instituiçoes" href={""} />
-      {loading && <p>Carregando...</p>}
+      {loading && <Loading />}
       {error && <p>{error}</p>}
       {instituicoes && <List_Instituicoes  instituicoes={instituicoes} />}
     </main>

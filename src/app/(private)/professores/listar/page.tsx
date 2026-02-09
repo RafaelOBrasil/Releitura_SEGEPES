@@ -4,6 +4,7 @@ import SubHeader from "@/components/header/subHeader"
 import ListFuncionarios from "@/app/(private)/funcionarios/_components/list_funcionarios";
 import { Funcionarios } from "@/types/listas"
 import { useEffect, useState } from "react";
+import Loading from "@/components/loading/loading";
 
 
 
@@ -33,7 +34,7 @@ export default function FuncionariosPage() {
   return (
     <main className="sm:ml-64">
       <SubHeader title="Funcionarios" href={""} />
-      {loading && <p>Carregando...</p>}
+      {loading && <Loading />}
       {error && <p>{error}</p>}
       {funcionarios && <ListFuncionarios funcionarios={funcionarios} />}
     </main>

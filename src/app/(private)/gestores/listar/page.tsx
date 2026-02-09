@@ -83,7 +83,7 @@ export default function UserTablePage() {
 
   return (
     <main className="sm:ml-64">
-      <SubHeader title="Alunos"/>
+      <SubHeader title="Alunos" href={""}/>
       <div className="space-y-4 m-6">
         {/* Input de busca */}
         <Input
